@@ -2,14 +2,14 @@
     <label class="from-label mb-2" for="">Enter otp send to your mobile no.</label>
     <input type="text" class="form-control">
     <div class="d-flex justify-content-between mt-2">
-        <p>{{time1}}</p>
-        <p class="text-primary" (click)="startTimer('time1')">Resend</p>
+        <p id="1"></p>
+        <p class="text-primary" (click)="startTimer(1)">Resend</p>
     </div>
     <label class="form-label mb-2" for="">Enter otp send to your Email address</label>
     <input type="text" class="form-control">
     <div class="d-flex justify-content-between mt-2">
-        <p>{{time2}}</p>
-        <p class="text-primary" (click)="startTimer('time2')">Resend</p>
+        <p id="2"></p>
+        <p class="text-primary" (click)="startTimer(2)">Resend</p>
     </div>
     <button class="btn btn-success">Verify</button>
 </div>
