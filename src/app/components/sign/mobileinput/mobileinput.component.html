@@ -1,11 +1,16 @@
-<div class="w-25 p-3 m-2 shadow">
+<form [formGroup]="signInForm" (ngSubmit)="submitForm()">
+    <div class="w-25 p-3 m-4 shadow">
     <div class=" m-4">
         <label for="" class="mb-2 from-label">Please enter your mobile number</label>
-        <input type="text" class="mb-3 form-control">
+        <input type="text" class="mb-3 form-control"  formControlName="mobileno">
+        <div *ngIf="this.signInForm.get('mobileno')?.errors?.['error'] && this.signInForm.get('mobileno')?.touched">
+            Only number allowed
+        </div>
     </div>
     <div class="m-4">
         <label for="" class="mb-2 from-label">Please enter your Email Id</label>
-        <input type="email" class="mb-3 form-control">
+        <input type="email" class="mb-3 form-control" formControlName="email">
     </div>
     <button class="mt-2  ms-4 btn btn-primary">Submit</button>
 </div>
+</form>
