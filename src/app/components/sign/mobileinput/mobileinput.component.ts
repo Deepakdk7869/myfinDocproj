@@ -21,6 +21,7 @@ export class MobileinputComponent implements OnInit {
   submitForm(){
     if(this.signInForm.valid){  
       console.log(this.signInForm.value)
+      console.log('first_branch')
     }
   }
   onlyNumber():ValidatorFn{
