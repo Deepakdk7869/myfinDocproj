@@ -26,6 +26,7 @@ export class MobileinputComponent implements OnInit {
   onlyNumber():ValidatorFn{
     return (control:AbstractControl)=>{
       let value = control.value.trim();
+      console.log(value);
       if(value && !(/^[0-9]+$/.test(value))){
         return {error: 'Only number allowed'}
       }
