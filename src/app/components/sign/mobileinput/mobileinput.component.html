@@ -2,23 +2,14 @@
     <div class="w-25 p-3 m-4 shadow">
     <div class=" m-4">
         <label for="" class="mb-2 from-label">Please enter your mobile number</label>
-        <input type="text" class="mb-3 form-control"  formControlName="mobileno" [maxlength]="10" autocomplete="off">
-        <div class="text-danger" *ngIf="this.signInForm.get('mobileno')?.errors?.['error'] ">
+        <input type="text" class="mb-3 form-control"  formControlName="mobileno">
+        <div *ngIf="this.signInForm.get('mobileno')?.errors?.['error'] && this.signInForm.get('mobileno')?.touched">
             Only number allowed
         </div>
-        <span class="d-block text-danger" *ngIf="this.signInForm.get('mobileno')?.errors?.['minlength'] && !this.signInForm.get('mobileno')?.errors?.['error']">
-            please enter 10 digit mobile number.
-        </span>
     </div>
     <div class="m-4">
         <label for="" class="mb-2 from-label">Please enter your Email Id</label>
-        <input type="email" class="mb-3 form-control" formControlName="email" autocomplete="off">
-        <span class="d-block text-danger" *ngIf="this.signInForm.get('email')?.errors?.['required'] && this.signInForm.get('email')?.touched">
-            Email address is required.
-        </span>
-        <span class="d-block text-danger" *ngIf="this.signInForm.get('email')?.errors?.['email'] ">
-            please enter valid email address
-        </span>
+        <input type="email" class="mb-3 form-control" formControlName="email">
     </div>
     <button class="mt-2  ms-4 btn btn-primary">Submit</button>
 </div>
