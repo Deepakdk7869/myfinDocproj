@@ -3,10 +3,7 @@
     <div class=" m-4">
         <label for="" class="mb-2 from-label">Please enter your mobile number</label>
         <input type="text" class="mb-3 form-control"  formControlName="mobileno">
-        <div *ngIf="this.signInForm.get('mobileno')?.errors?.['error']">
-            Only number allowed
-        </div>
-        <div *ngIf="this.signInForm.get('mobileno')?.errors?.['minlength'] && this.signInForm.get('mobileno')?.touched">
+        <div *ngIf="this.signInForm.get('mobileno')?.errors?.['error'] && this.signInForm.get('mobileno')?.touched">
             Only number allowed
         </div>
     </div>
