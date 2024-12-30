@@ -20,13 +20,13 @@ export class MobileinputComponent implements OnInit {
   }
   submitForm(){
     if(this.signInForm.valid){  
-      console.log(this.signInForm.value)
+      console.log(this.signInForm.value);
     }
   }
   onlyNumber():ValidatorFn{
     return (control:AbstractControl)=>{
       let value = control.value.trim();
-      if(!(/^[0-9]+$/.test(value))){
+      if(value && !(/^[0-9]+$/.test(value))){
         return {error: 'Only number allowed'}
       }
       return null
