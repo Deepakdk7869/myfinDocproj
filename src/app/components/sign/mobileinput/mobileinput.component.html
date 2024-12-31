@@ -15,6 +15,11 @@
         <label for="" class="mb-2 from-label">Please enter your Email Id</label>
         <input type="email" class="mb-3 form-control" formControlName="email">
     </div>
+    <div class="m-4">
+        <label for="" class="mb-2 from-label">Please enter your proof ID No.</label>
+        <input type="text" class="mb-3 form-control" [(ngModel)]="finalMaskedValue"  (input)="maskContent($event)" [ngModelOptions]="{standalone: true}" [maxlength]="12"> 
+        <input type="text" class="mb-3 form-control d-none"  formControlName="proofType">
+    </div>
     <button class="mt-2  ms-4 btn btn-primary">Submit</button>
 </div>
 </form>
